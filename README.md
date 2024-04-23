@@ -80,3 +80,25 @@ CREATE UNIQUE INDEX "attendees_event_id_email_key" ON "attendees"("event_id", "e
 -- CreateIndex
 CREATE UNIQUE INDEX "check_ins_attendeeId_key" ON "check_ins"("attendeeId");
 ```
+
+### Anotações
+
+Métodos HTTP: GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS, ... utilizar por questão de semântica
+
+Corpo da requisição (Request Body)
+Parâmetros de busca (Search Params / Query Params) `http://localhost:3333/users?name=Isis`
+Parâmetros de rota (Route Params) -> identificação de recursos `DELETE http://localhost:3333/users/3`
+Cabeçalhos (Headers) -> Contexto
+
+Semânticas = Significado
+
+Driver nativo / Query Builder / ORMs
+
+JSON - JavaScript Object Notation
+
+status:
+
+20X => sucesso
+30X => redirecionamento
+40X => erro do cliente (erro em alguma informação enviada por quem está fazendo a chamada para a API)
+50X => erro do servidor (um erro que está acontecendo independente do que está sendo enviado para o servidor)
